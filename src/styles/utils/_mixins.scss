@@ -24,21 +24,23 @@
 }
 
 @mixin top-actions {
-  --icon-width: 18px;
+  --menu-width: 24px;
 
   display: grid;
-  grid-template-columns: 1fr var(--icon-width) var(--icon-width);
+  grid-template-columns: 1fr var(--menu-width);
 
-  gap: 30px;
+  gap: 16px;
 
   &--menu {
-    grid-template-columns: 1fr var(--icon-width);
+    grid-template-columns: 1fr var(--menu-width);
   }
 
   @include onTablet {
-    --icon-width: 24px;
+    gap: 24px;
+  }
 
-    gap: 40px;
+  @include onDesktop {
+    --menu-width: 500px;
   }
 }
 
@@ -61,8 +63,18 @@
 
   background-size: 24px;
   background-repeat: no-repeat;
-  background-position: 45px;
+  background-position: 40px;
   background-image: url(../images/Icon-cookie.png);
+
+  @include onTablet {
+    max-width: 326px;
+    background-position: 80px;
+  }
+
+  @include onDesktop {
+    max-width: 260px;
+    background-position: 50px;
+  }
 
   &:hover {
     background: $accent-orange;
@@ -70,18 +82,36 @@
 
     background-size: 24px;
     background-repeat: no-repeat;
-    background-position: 45px;
+    background-position: 40px;
     background-image: url(../images/Icon-cookie-white.png);
+
+    @include onTablet {
+      background-position: 80px;
+    }
+
+    @include onDesktop {
+      background-position: 50px;
+    }
   }
 
   &:active {
     background: $dark-orange;
     color: $white;
 
+    border: 2px solid $dark-orange;
+
     background-size: 24px;
     background-repeat: no-repeat;
-    background-position: 45px;
+    background-position: 40px;
     background-image: url(../images/Icon-cookie-white.png);
+
+    @include onTablet {
+      background-position: 80px;
+    }
+
+    @include onDesktop {
+      background-position: 50px;
+    }
   }
 
   &:disabled {

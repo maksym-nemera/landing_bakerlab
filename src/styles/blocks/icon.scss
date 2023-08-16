@@ -9,4 +9,8 @@
   &--close {
     background-image: url(../images/Icon-close.png);
   }
+
+  @include onDesktop {
+    display: none;
+  }
 }

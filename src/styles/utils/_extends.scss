@@ -16,7 +16,7 @@
   font-size: 16px;
   line-height: 150%;
 
-  letter-spacing: -0.01em;
+  letter-spacing: -0.16px;
 }
 
 %h4-uppercase-text {
@@ -32,15 +32,22 @@
   font-size: 64px;
   line-height: 85%;
 
-  letter-spacing: -0.05em;
+  letter-spacing: -3.2px;
   text-transform: uppercase;
 
   @include onTablet {
     font-size: 80px;
+    letter-spacing: -4px;
   }
 
   @include onDesktop {
+    font-size: 136px;
+    letter-spacing: -6.8px;
+  }
+
+  @include onBigDesktop {
     font-size: 144px;
+    letter-spacing: -7.2px;
   }
 }
 

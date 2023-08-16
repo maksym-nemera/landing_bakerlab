@@ -6,10 +6,13 @@
   // }
 
   &__body {
-
     &--with-menu {
       background-color: $light-blue;
       overflow: hidden;
+    }
+
+    @include onDesktop {
+      position: relative;
     }
   }
 
@@ -24,6 +27,13 @@
 
     &:target {
       transform: translate(0);
+    }
+
+    @include onDesktop {
+      position: absolute;
+      top: 0;
+      transform: translateX(0);
+      transition: none;
     }
   }
 

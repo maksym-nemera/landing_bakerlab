@@ -6,8 +6,6 @@
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
-
     padding: var(--header-top-padding) 0 var(--header-bottom-padding);
 
     @include onTablet {
@@ -25,11 +23,19 @@
   }
 
   &__top {
-    display: flex;
-    justify-content: space-between;
+    @include top-actions;
+
     align-items: center;
 
     padding-bottom: 48px;
+
+    @include onTablet {
+      padding-bottom: 80px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 135px;
+    }
   }
 
   &__slogan {
@@ -37,26 +43,76 @@
     text-align: center;
 
     padding-bottom: 32px;
+
+    @include onTablet {
+      text-align: left;
+      padding-bottom: 146px;
+    }
+
+    @include onDesktop {
+      text-align: left;
+      padding-bottom: 8px;
+    }
+
+    @include onBigDesktop {
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
-    color: $black;
+    color: $accent-orange;
     text-align: center;
-
-    letter-spacing: -3.2px;
   }
 
   &__image-container {
+    position: relative;
     display: flex;
     justify-content: center;
+    z-index: -1;
+
+    @include onTablet {
+      padding-bottom: 210px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 24px;
+    }
   }
 
   &__image {
     width: 288px;
     height: 290px;
+
+    @include onTablet {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+
+      transform: translateY(-60%);
+    }
+
+    @include onDesktop {
+      position: absolute;
+      width: 550px;
+      height: 550px;
+
+      transform: translateY(-60%);
+    }
+
+    @include onBigDesktop {
+      position: absolute;
+      width: 590px;
+      height: 590px;
+
+      transform: translateY(-60%);
+    }
   }
 
   &__button {
     @include button-with-cookie;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

@@ -13,23 +13,38 @@
       <div class="container">
         <div class="header__content">
           <nav class="header__top">
-            <a href="#">
+            <a href="#" class="logo">
               <img
                 src="images/Logo.png"
                 alt="Bakerylab Logo"
+                class="logo__image"
               >
             </a>
 
             <a href="#menu" class="icon icon--menu"></a>
           </nav>
 
-          <p class="header__slogan">
-            We bake your fantasies — croissants, cakes, cookies, and cupcakes.
-          </p>
+          <div class="grid grid--tablet">
+            <div
+              class="
+              grid__item-tablet--1-4
+              grid__item-desktop--1-2"
+            >
+              <p class="header__slogan">
+                We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+              </p>
+            </div>
 
-          <h1 class="header__title">
-            Creative bakery
-          </h1>
+            <div
+              class="
+                grid__item-tablet--1-8
+                grid__item-desktop--1-8"
+              >
+              <h1 class="header__title">
+                Creative bakery
+              </h1>
+            </div>
+          </div>
 
           <div class="header__image-container">
             <img
@@ -39,12 +54,20 @@
             >
           </div>
 
-          <button
-            type="submit"
-            class="header__button"
-          >
-            Learn more
-          </button>
+          <div class="grid grid--tablet">
+            <div
+              class="
+              grid__item-tablet--3-6
+              grid__item-desktop--1-2"
+            >
+              <button
+                type="submit"
+                class="header__button"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -53,10 +76,11 @@
       <div class="container">
         <div class="menu__content">
           <div class="menu__top">
-            <a href="#">
+            <a href="#" class="logo">
               <img
                 src="images/Logo.png"
                 alt="Bakerylab Logo"
+                class="logo__image"
               >
             </a>
 
@@ -81,14 +105,14 @@
                 Blog
               </a>
             </li>
+            <a
+              href="tel:+1 234 5555-55-55"
+              class="menu__call"
+            >
+              Contact us
+            </a>
           </ul>
 
-          <a
-            href="tel:+1 234 5555-55-55"
-            class="menu__call"
-          >
-            Contact us
-          </a>
         </div>
       </div>
     </nav>
@@ -99,7 +123,6 @@
     </main>
 
     <footer>
-
     </footer>
   </body>
 </html>
