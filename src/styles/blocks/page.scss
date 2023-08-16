@@ -5,8 +5,27 @@
   // &__head {
   // }
 
-  // &__body {
-  // }
+  &__body {
+
+    &--with-menu {
+      background-color: $light-blue;
+      overflow: hidden;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transform: translateX(-100%);
+    transition: transform $transition-duration;
+
+    &:target {
+      transform: translate(0);
+    }
+  }
 
   // &__section {
   // }

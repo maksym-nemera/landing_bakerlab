@@ -9,18 +9,89 @@
     <script type="text/javascript" src="scripts/main.js"></script>
   </head>
   <body class="page__body">
-    <header>
-      <nav>
-        <a href="/">
-          <img
-            src="images/Logo.png"
-            alt="Bakerylab Logo"
-          >
-        </a>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <nav class="header__top">
+            <a href="#">
+              <img
+                src="images/Logo.png"
+                alt="Bakerylab Logo"
+              >
+            </a>
 
-        <a href="#menu">menu</a>
-      </nav>
+            <a href="#menu" class="icon icon--menu"></a>
+          </nav>
+
+          <p class="header__slogan">
+            We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+          </p>
+
+          <h1 class="header__title">
+            Creative bakery
+          </h1>
+
+          <div class="header__image-container">
+            <img
+              src="images/photos/Cookie.png"
+              alt="Cookie"
+              class="header__image"
+            >
+          </div>
+
+          <button
+            type="submit"
+            class="header__button"
+          >
+            Learn more
+          </button>
+        </div>
+      </div>
     </header>
+
+    <nav class="page__menu menu" id="menu">
+      <div class="container">
+        <div class="menu__content">
+          <div class="menu__top">
+            <a href="#">
+              <img
+                src="images/Logo.png"
+                alt="Bakerylab Logo"
+              >
+            </a>
+
+            <a href="#" class="icon icon--close"></a>
+          </div>
+
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#products" class="menu__link">
+                Products
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a href="#about-us" class="menu__link">
+                About us
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a href="#blog" class="menu__link">
+                Blog
+              </a>
+            </li>
+          </ul>
+
+          <a
+            href="tel:+1 234 5555-55-55"
+            class="menu__call"
+          >
+            Contact us
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <main>
       <section>

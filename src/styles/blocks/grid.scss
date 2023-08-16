@@ -1,4 +1,4 @@
-.grid {
+ .grid {
   --gap: 16px;
 
   display: grid;
@@ -32,18 +32,6 @@
 
   @include onTablet {
     &__item-tablet {
-      @for $start from 1 through 8 {
-        @for $end from $start through 8 {
-          &--#{$start}-#{$end} {
-            grid-column: #{$start} / #{$end + 1};
-          }
-        }
-      }
-    }
-  }
-
-  @include onDesktop {
-    &__item-desktop {
       @for $start from 1 through 8 {
         @for $end from $start through 8 {
           &--#{$start}-#{$end} {

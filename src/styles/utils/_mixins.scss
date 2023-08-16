@@ -41,3 +41,170 @@
     gap: 40px;
   }
 }
+
+@mixin button-with-cookie {
+  @extend %h4-uppercase-text;
+  letter-spacing: 0.32px;
+
+  background: $white;
+  color: $accent-orange;
+
+  width: 100%;
+  max-width: 248px;
+  height: 56px;
+  border-radius: 32px;
+  border: 2px solid $accent-orange;
+  outline: none;
+  cursor: pointer;
+
+  margin: 0 auto;
+
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 45px;
+  background-image: url(../images/Icon-cookie.png);
+
+  &:hover {
+    background: $accent-orange;
+    color: $white;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 45px;
+    background-image: url(../images/Icon-cookie-white.png);
+  }
+
+  &:active {
+    background: $dark-orange;
+    color: $white;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 45px;
+    background-image: url(../images/Icon-cookie-white.png);
+  }
+
+  &:disabled {
+    background: $white;
+    color: $light-orange;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 45px;
+    background-image: url(../images/Icon-cookie.png);
+  }
+}
+
+@mixin button-without-cookie {
+  @extend %h4-uppercase-text;
+  letter-spacing: 0.32px;
+
+  background: $white;
+  color: $accent-orange;
+
+  width: 100%;
+  max-width: 248px;
+  height: 56px;
+  border-radius: 32px;
+  border: 2px solid $accent-orange;
+  outline: none;
+  cursor: pointer;
+
+  margin: 0 auto;
+
+  &:hover {
+    background: $accent-orange;
+    color: $white;
+  }
+
+  &:active {
+    background: $dark-orange;
+    color: $white;
+  }
+
+  &:disabled {
+    background: $white;
+    color: $light-orange;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+@mixin link {
+  @extend %h4-uppercase-text;
+  letter-spacing: 0.32px;
+  position: relative;
+
+  color: $accent-orange;
+
+  display: inline-flex;
+  width: 140px;
+  height: 32px;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin: 0 auto;
+
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  background-image: url(../images/Icon-phone.png);
+
+  &:hover {
+    color: $accent-orange;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-image: url(../images/Icon-phone.png);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 25px;
+      width: 100%;
+      height: 1px;
+
+      background-color: $accent-orange;
+      margin-top: 6px;
+    }
+  }
+
+  &:active {
+    color: $dark-orange;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-image: url(../images/Icon-phone.png);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 25px;
+      width: 100%;
+      height: 1px;
+
+      background-color: $dark-orange;
+      margin-top: 6px;
+    }
+  }
+
+  &:disabled {
+    color: $light-orange;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-image: url(../images/Icon-phone.png);
+  }
+}
