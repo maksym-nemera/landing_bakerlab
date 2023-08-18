@@ -1,0 +1,90 @@
+.about {
+  margin-bottom: 72px;
+
+  position: relative;
+
+  @include onTablet {
+    margin-bottom: 152px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 350px;
+  }
+
+  &__image-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 540px ;
+
+    z-index: -1;
+
+    @include onTablet {
+      top: 50px;
+      left: 120px;
+    }
+
+    @include onDesktop {
+      top: 0;
+      left: 325px;
+    }
+
+    @include onDesktop {
+      top: 0;
+      left: 360px;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    @include onTablet {
+      width: 526px;
+      height: 493px;
+    }
+
+    @include onDesktop {
+      width: 718px;
+      height: 673px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin-bottom: 64px;
+
+    @include onTablet {
+      margin-bottom: 72px;
+    }
+
+    @include onTablet {
+      margin-bottom: 145px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 48px;
+
+    @include onTablet {
+      margin-bottom: 80px;
+    }
+
+    &-number {
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      color: $grey;
+    }
+  }
+}
