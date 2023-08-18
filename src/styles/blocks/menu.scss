@@ -88,6 +88,6 @@
   }
 
   &__call {
-    @include link;
+    @include link("../images/Icon-phone.png", "../images/Icon-phone-dark.png");
   }
 }

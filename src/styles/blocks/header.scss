@@ -109,7 +109,10 @@
   }
 
   &__button {
-    @include button-with-cookie;
+    @include custom-button-with-img(
+      "../images/Icon-cookie.png",
+      "../images/Icon-cookie-white.png"
+    );
 
     position: relative;
     left: 50%;

@@ -24,7 +24,7 @@
   font-size: 16px;
   line-height: 100%;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.32px;
   text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@
   font-size: 48px;
   line-height: 85%;
 
-  letter-spacing: -0.05em;
+  letter-spacing: -2.4px;
   text-transform: uppercase;
 
   @include onTablet {

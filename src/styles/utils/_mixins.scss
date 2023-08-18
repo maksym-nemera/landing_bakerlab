@@ -44,7 +44,7 @@
   }
 }
 
-@mixin button-with-cookie {
+@mixin custom-button-with-img($_img-normal, $_img-hover) {
   @extend %h4-uppercase-text;
   letter-spacing: 0.32px;
 
@@ -59,12 +59,14 @@
   outline: none;
   cursor: pointer;
 
-  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: 40px;
-  background-image: url(../images/Icon-cookie.png);
+  background-image: url(#{$_img-normal});
 
   @include onTablet {
     max-width: 326px;
@@ -83,7 +85,7 @@
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 40px;
-    background-image: url(../images/Icon-cookie-white.png);
+    background-image: url(#{$_img-hover});
 
     @include onTablet {
       background-position: 80px;
@@ -103,7 +105,7 @@
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 40px;
-    background-image: url(../images/Icon-cookie-white.png);
+    background-image: url(#{$_img-hover});
 
     @include onTablet {
       background-position: 80px;
@@ -124,47 +126,11 @@
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 45px;
-    background-image: url(../images/Icon-cookie.png);
+    background-image: url(#{$_img-normal});
   }
 }
 
-@mixin button-without-cookie {
-  @extend %h4-uppercase-text;
-  letter-spacing: 0.32px;
-
-  background: $white;
-  color: $accent-orange;
-
-  width: 100%;
-  max-width: 248px;
-  height: 56px;
-  border-radius: 32px;
-  border: 2px solid $accent-orange;
-  outline: none;
-  cursor: pointer;
-
-  margin: 0 auto;
-
-  &:hover {
-    background: $accent-orange;
-    color: $white;
-  }
-
-  &:active {
-    background: $dark-orange;
-    color: $white;
-  }
-
-  &:disabled {
-    background: $white;
-    color: $light-orange;
-    cursor: not-allowed;
-    opacity: 0.6;
-    pointer-events: none;
-  }
-}
-
-@mixin link {
+@mixin link($_img-normal, $_img-active) {
   @extend %h4-uppercase-text;
   letter-spacing: 0.32px;
   position: relative;
@@ -179,18 +145,15 @@
 
   margin: 0 auto;
 
+  cursor: pointer;
+
   background-size: 24px;
   background-repeat: no-repeat;
-  background-position: 0;
-  background-image: url(../images/Icon-phone.png);
+  background-position: 3px;
+  background-image: url(#{$_img-normal});
 
   &:hover {
     color: $accent-orange;
-
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: 0;
-    background-image: url(../images/Icon-phone.png);
 
     &::after {
       content: "";
@@ -208,10 +171,7 @@
   &:active {
     color: $dark-orange;
 
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: 0;
-    background-image: url(../images/Icon-phone.png);
+    background-image: url(#{$_img-active});
 
     &::after {
       content: "";
@@ -234,7 +194,7 @@
 
     background-size: 24px;
     background-repeat: no-repeat;
-    background-position: 0;
-    background-image: url(../images/Icon-phone.png);
+    background-position: 3px;
+    background-image: url(#{$_img-normal});
   }
 }
