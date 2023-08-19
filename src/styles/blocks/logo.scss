@@ -1,7 +1,11 @@
 .logo {
+  max-width: max-content;
+  
   &__image {
-    display: block;
     width: 136px;
     height: 32px;
+    max-width: max-content;
+
+    display: block;
   }
 }

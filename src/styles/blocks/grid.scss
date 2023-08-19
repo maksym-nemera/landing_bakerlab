@@ -6,8 +6,9 @@
   column-gap: var(--gap);
 
   @include onTablet {
-    grid-template-columns: repeat(8, 1fr);
     --gap: 24px;
+    
+    grid-template-columns: repeat(8, 1fr);
   }
 
   @include onDesktop {

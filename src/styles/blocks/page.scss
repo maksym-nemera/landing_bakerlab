@@ -2,12 +2,9 @@
   background-color: $light-blue;
   scroll-behavior: smooth;
 
-  // &__head {
-  // }
-
   &__body {
     &--with-menu {
-      background-color: $light-blue;
+      background-color: inherit;
       overflow: hidden;
     }
 
@@ -32,11 +29,27 @@
     @include onDesktop {
       position: absolute;
       top: 0;
+
       transform: translateX(0);
       transition: none;
     }
   }
 
-  // &__section {
-  // }
+  &__section {
+    margin-bottom: 72px;
+
+    @include onTablet {
+      margin-bottom: 152px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 178px;
+    }
+
+    &:last-child {
+      @include onDesktop {
+        margin-bottom: 350px;
+      }
+    }
+  }
 }

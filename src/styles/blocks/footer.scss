@@ -1,5 +1,6 @@
 .footer {
   background-color: $black;
+  color: $white;
 
   &__content {
     --footer-top-padding: 56px;
@@ -15,6 +16,7 @@
 
   &__logo {
     margin-bottom: 40px;
+    max-width: min-content;
 
     @include onTablet {
       margin-bottom: 96px;
@@ -26,9 +28,9 @@
   }
 
   &__menu {
-    background-color: inherit;
-
     margin-bottom: 64px;
+
+    background-color: inherit;
 
     @include onTablet {
       margin-bottom: 0;
@@ -47,17 +49,18 @@
     }
 
     &-title {
-      color: $grey;
+      margin-bottom: 16px;
 
       display: flex;
       justify-content: flex-start;
 
-      margin-bottom: 16px;
+      color: $grey;
     }
   }
 
   &__list {
     margin-bottom: 0;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -76,16 +79,12 @@
   }
 
   &__contact {
-    --contact-width: 24px;
-    color: $white;
-
     margin-bottom: 40px;
 
-    display: grid;
-    grid-template-columns: 1fr var(--contact-width);
+    width: 250px;
 
     @include onDesktop {
-      --contact-width: auto;
+      width: auto;
     }
   }
 
@@ -98,12 +97,13 @@
     }
 
     &-link {
-      display: block;
       width: 24px;
       height: 24px;
+
+      display: block;
+
       background-repeat: no-repeat;
       background-position: 0;
-      transition: background-image 0.3s;
 
       &:hover {
         cursor: pointer;
@@ -113,25 +113,19 @@
     .footer__facebook-link {
       background-image: url(../images/Icon-facebook.png);
 
-      &:hover {
-        background-image: url(../images/Icon-facebook-white.png);
-      }
+      @include hover(background-image, url(../images/Icon-facebook-white.png));
     }
 
     .footer__instagram-link {
       background-image: url(../images/Icon-instagram.png);
 
-      &:hover {
-        background-image: url(../images/Icon-instagram-white.png);
-      }
+      @include hover(background-image, url(../images/Icon-instagram-white.png));
     }
 
     .footer__twitter-link {
       background-image: url(../images/Icon-twitter.png);
 
-      &:hover {
-        background-image: url(../images/Icon-twitter-white.png);
-      }
+      @include hover(background-image, url(../images/Icon-twitter-white.png));
     }
   }
 
