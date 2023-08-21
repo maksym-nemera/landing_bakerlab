@@ -69,6 +69,8 @@
   &__item {
     margin-bottom: 16px;
 
+    @include hover (transform, scale($scale));
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -94,6 +96,10 @@
     &-list {
       display: flex;
       gap: 32px;
+    }
+
+    &-item {
+      @include hover (transform, scale($scale));
     }
 
     &-link {

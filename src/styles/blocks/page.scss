@@ -4,7 +4,6 @@
 
   &__body {
     &--with-menu {
-      background-color: inherit;
       overflow: hidden;
     }
 
@@ -19,18 +18,18 @@
     left: 0;
     right: 0;
 
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     transition: transform $transition-duration;
 
     &:target {
-      transform: translate(0);
+      transform: translateY(50px);
     }
 
     @include onDesktop {
       position: absolute;
       top: 0;
 
-      transform: translateX(0);
+      transform: translateY(0);
       transition: none;
     }
   }

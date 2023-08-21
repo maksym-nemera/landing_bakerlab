@@ -3,6 +3,8 @@
     --header-top-padding: 16px;
     --header-bottom-padding: 104px;
 
+    position: relative;
+
     padding: var(--header-top-padding) 0 var(--header-bottom-padding);
 
     display: flex;
@@ -26,6 +28,7 @@
     @include top-actions;
 
     padding-bottom: 48px;
+    z-index: 1;
 
     align-items: center;
 

@@ -1,12 +1,13 @@
 .menu {
-  background-color: inherit;
+  background-color: $light-blue;
 
   @include onDesktop {
     background-color: transparent;
+    z-index: 1;
   }
 
   &__content {
-    --header-top-padding: 16px;
+    --header-top-padding: 150px;
     --header-bottom-padding: 104px;
 
     position: relative;
@@ -65,6 +66,8 @@
 
   &__item {
     margin-bottom: 24px;
+
+    @include hover (transform, scale($scale));
 
     @include onDesktop {
       margin-bottom: 0;
