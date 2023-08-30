@@ -1,6 +1,6 @@
 # [Bakerlab Landing Page](https://maksym-nemera.github.io/landing_bakerlab/)
 
-This repository contains the source code and assets for the **Bakerlab Landing Page** project.
+This repository contains the source code and assets for the **Bakerlab Landing Page** project developed on **[Figma](https://www.figma.com/file/dY3izAm0Vspsmra4lQWQIP/Bakerlab_FE-students?node-id=11342%3A1335&mode=dev)** design.
 
 You may try it on this page: [CLICK ME](https://maksym-nemera.github.io/landing_bakerlab/)
 
@@ -10,7 +10,11 @@ The Bakerlab Landing Page is a website designed to showcase and promote a bakery
 
 ## Features
 
-- Responsive design for optimal viewing on different devices.
+- Responsive design for optimal viewing on different devices:
+	- 320px (Mobile adaptive)
+	- 768px (Tablet adaptive)
+	- 1200px (Desktop adaptive)
+	- 1444px
 - Interactive elements and animations to enhance user experience.
 - Modular code structure using BEM methodology for easier maintenance and scalability.
 - Styling with SCSS to take advantage of nested rules, variables, and mixins.
@@ -19,7 +23,7 @@ The Bakerlab Landing Page is a website designed to showcase and promote a bakery
 
 Feel free to customize the content, styles, and functionality of the Bakerlab Landing Page to suit your needs. You can modify the existing code or add new features as required.
 
-## Acknowledgements
+## Tech stack
 
 - HTML
 - SCSS
