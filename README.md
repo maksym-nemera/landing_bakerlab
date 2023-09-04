@@ -48,20 +48,24 @@ If you would like to contribute to this project, you can follow these steps:
    ```shell
    git switch -c feature/your-feature
    ```
-5. Install packages:
+5. **Use nvm version 14**:
+   ```shell
+   nvm use 14
+   ```
+6. Install packages:
    ```shell
    npm i
    ```
-6. Start the project:
+7. Start the project:
    ```shell
    npm start
    ```
-7. Make your changes and test them locally.
-8. Commit your changes:
+8. Make your changes and test them locally.
+9. Commit your changes:
    ```shell
    git commit -m 'Add some feature'
    ```
-9. Push the branch to your forked repository:
+10. Push the branch to your forked repository:
    ```shell
    git push origin feature/your-feature
    ```
